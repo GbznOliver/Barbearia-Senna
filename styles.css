@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+
+    --fonte-principal: "Nunito", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*navegação*/
+header {
+    background-color: rgb(218, 206, 191);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    position: fixed;
+    font-family: var(--fonte-secundaria);
+    width: 100%;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    top: 0;
+}
+
+header img {
+    width: 120px;
+}
+
+header a  {
+    transition: trasnform 0.3s ease-in-out;
+}
+
+header a:hover {
+    transform: scale(1.07);
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+    padding: 0 2px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    text-shadow: none;
+    transition: transform 0.1s ease-in-out, text-shadow 0.1s ease;
+    font-size: 1.1rem;
+}
+
+.navbar a:hover {
+    transform: scale(1.07);
+    text-shadow: 0 0px 30px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background: radial-gradient(circle,  rgba(219, 213, 204, 0.829) , #64605d);
+    padding: 105px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+#inicio h1 {
+    font-family: var(--fonte-secundaria);
+    font-size: 45px;
+    margin: 35px;
+    font-weight: 600;
+    opacity: 0; /*  inicial */
+    transform: translateY(70px); 
+    animation: aparecer 1.5s ease-out forwards; 
+}
+
+@keyframes aparecer {
+    to {
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+#inicio p {
+    font-family: var(--fonte-secundaria);
+    font-size: 23px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+#inicio img {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    width: 550px;
+    margin-top: 150px;
+    opacity: 0; /*  inicial */
+    transform: translateY(35px); 
+    animation: aparecer 1.5s ease-out forwards; 
+}
+
+@keyframes aparecer {
+    to {
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+  .botao {
+    background-color: rgb(161, 156, 156);
+    border: none;
+    padding: 20px 40px;
+    font-size: 17px;
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.4s ease;
+    margin: 10px;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+}
+
+.botao:hover {
+    background-color: black; 
+    transform: scale(1.07); 
+    color: white;
+}
+
+
+
+
+
+/*resposividade*/
+@media (max-width: 768px) {
+    header {
+        padding: 15px 60px;
+        flex-direction: space-between; 
+    }
+    .navbar {
+        flex-direction: column; 
+        gap: 15px;
+    }
+    .navbar a {
+        font-size: 14px;
+    }
+    #inicio img {
+        width: 350px;
+        margin-top: 120px;
+    }
+    #inicio h1 {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+    #inicio p {
+        white-space: nowrap;
+        font-size: 15px;
+        margin: 0;
+    }
+    #inicio {
+        padding: 70px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 80px;
+    }
+    .navbar {
+        flex-direction: column; 
+        gap: 10px;
+    }
+    .navbar a {
+        font-size: 12px;
+    }
+}
