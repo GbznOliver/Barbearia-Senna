@@ -171,6 +171,9 @@ header a:hover {
     #inicio {
         padding: 70px;
     }
+    header img {
+        width: 150px;
+    }
 }
 
 
@@ -184,5 +187,24 @@ header a:hover {
     }
     .navbar a {
         font-size: 12px;
+    }
+     #inicio img {
+        width: 350px;
+        margin-top: 120px;
+    }
+    #inicio h1 {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+    #inicio p {
+        white-space: nowrap;
+        font-size: 15px;
+        margin: 0;
+    }
+    #inicio {
+        padding: 70px;
+    }
+     header img {
+        width: 150px;
     }
 }
